@@ -26,5 +26,5 @@ jobs:
           npm ci
       - name: deploy
         run: |
-          zip -rj deploy.zip ./*
+          zip -r deploy.zip ./*
           aws lambda update-function-code --function-name=backend_api --zip-file=fileb://deploy.zip
